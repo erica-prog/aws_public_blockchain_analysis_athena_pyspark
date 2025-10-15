@@ -94,7 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>pyspark_blockchain/pyspark_blockchain_analysis.ipynb</code> — PySpark processing and visualizations for larger-scale transforms; exported visualizations live in <code>pyspark_blockchain/</code>.</li>
 </ul>
 <p>Use the images in <code>pyspark_blockchain/</code> (e.g., daily transactions, gas prices, whale concentration, token network structure) to explain results in reports or slides — they are produced by the PySpark notebook and ready to embed.</p>
-<p>Quick start (macOS / zsh)</p>
+<p><strong>Quick start (macOS / zsh)</strong></p>
 <ol type="1">
 <li>Create and activate a venv (Python 3.12+):</li>
 </ol>
@@ -111,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run from repository root</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>uv sync</code> is used here to apply the project’s <code>[tool.uv]</code> dev-dependency setup (see <code>pyproject.toml</code>). If <code>uv</code> is not installed on your machine, either install the <code>uv</code> tool you typically use, or skip this step and install dependencies manually.</p>
-<p>Activating the kernel in VS Code / Jupyter</p>
+<p><strong>Activating the kernel in VS Code / Jupyter</strong></p>
 <ul>
 <li>After activating <code>.venv</code>, start Jupyter or open the notebooks in VS Code. In VS Code, select the interpreter <code>./.venv/bin/python</code> for the notebook kernel so the notebook uses the virtualenv environment and installed packages.</li>
 <li>Example: <code>source .venv/bin/activate</code> then <code>jupyter lab</code> or use VS Code’s Run/Debug to open the notebook and set the kernel to <code>.venv</code>.</li>
@@ -167,7 +167,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Daily Transaction Volume</figcaption>
 </figure>
 </div>
-<p>The Ethereum network shows robust daily transaction volume over the past 30 days, with an average of 1.2M+ transactions per day. Notable observations: - Consistent baseline activity around 800K transactions - Weekend peaks reaching 1.5M+ transactions - Strong recovery from temporary dips, suggesting network resilience</p>
+<p>The Ethereum network maintained strong transactional throughput, averaging ~1.6–1.8 million daily transactions. Temporary mid-month dips were followed by quick rebounds, indicating healthy participation and consistent base-layer demand.</p>
+<p>Observed patterns: - Sustained network load above 1.5 M tx/day, reflecting continued on-chain activity. - Weekly oscillations suggest routine weekend volume peaks (DeFi, NFT, and roll-up settlements). - Overall, the network exhibits robust throughput stability despite small short-term fluctuations.</p>
 </section>
 <section id="gas-market-dynamics" class="level3">
 <h3 class="anchored" data-anchor-id="gas-market-dynamics">Gas Market Dynamics</h3>
@@ -177,7 +178,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Gas Price Trends</figcaption>
 </figure>
 </div>
-<p>Gas prices exhibit interesting patterns that affect network accessibility: - Moderate weekend premiums during high-activity periods - Recent trend toward lower fees (declining ~15% post-weekend spike) - Price stability in the 20-30 gwei range during normal operations</p>
+<p>Gas fees rose sharply around October 5-6, reaching nearly 275 ETH in total daily fees, then normalized toward 200-220 ETH.</p>
+<p>Observed patterns: - Short-term weekend surge aligned with peak usage periods. - Post-spike correction (~20%) indicates elasticity in fee markets. - Average baseline around 200 ETH/day, consistent with efficient block usage and fee-burn dynamics.</p>
 </section>
 <section id="network-efficiency-scaling" class="level3">
 <h3 class="anchored" data-anchor-id="network-efficiency-scaling">Network Efficiency &amp; Scaling</h3>
@@ -187,7 +189,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Block Utilization</figcaption>
 </figure>
 </div>
-<p>Block space usage remains optimized: - Average utilization steady at 75-85% - Peaks align with transaction volume spikes - Room for surge capacity during high-demand periods</p>
+<p>Block utilization remained tightly banded between 50.4 – 50.7 %, showing high consistency in validator performance and block-space allocation.</p>
+<p>Key observations: - Stable efficiency leads to network operates near steady-state capacity. - Short bursts above 50.6 % coincide with transaction peaks. - Ample scaling headroom remains available for future demand surges.</p>
 </section>
 <section id="whale-activity-market-impact" class="level3">
 <h3 class="anchored" data-anchor-id="whale-activity-market-impact">Whale Activity &amp; Market Impact</h3>
@@ -197,14 +200,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Whale Concentration</figcaption>
 </figure>
 </div>
-<p>Analysis of large-holder (“whale”) behavior reveals: - Top 10 addresses control significant transaction volume - Periodic large transfers affecting gas markets - Strategic timing of major moves during lower-fee periods</p>
+<p>Large-holder (“whale”) wallets dominate Ethereum transfer flow. The top 15 wallets collectively account for ~80 % of total ETH sent.</p>
+<p>Key observations: - Top 3 wallets each moved 400 K–800 K ETH, exerting outsized market influence. - The steep cumulative share curve indicates strong transaction centralization. - Whale coordination and timing can affect liquidity and gas volatility.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pyspark_blockchain/Gas%20Efficiency%20-%20Top%2010%20Whales%20by%20ETH%20Moved%20per%20ETH%20Spent.png" class="img-fluid figure-img"></p>
 <figcaption>Gas Efficiency</figcaption>
 </figure>
 </div>
-<p>Whale transaction efficiency: - Most efficient movers achieve 200+ ETH transferred per ETH spent on gas - Clear correlation between size and gas optimization - Evidence of sophisticated fee management strategies</p>
+<p>Efficiency varies widely among large senders. Top movers achieved over 80–95 M ETH transferred per ETH in gas, while less-active whales were below 1 M.</p>
+<p>Key observations: - Clear efficiency gradient → bigger senders optimize gas better. - Implies batching or advanced routing strategies by whales. - Highlights need for analytics-driven fee management tools.</p>
 </section>
 <section id="token-network-structure" class="level3">
 <h3 class="anchored" data-anchor-id="token-network-structure">Token Network Structure</h3>
@@ -214,7 +219,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Token Network</figcaption>
 </figure>
 </div>
-<p>The token transfer network shows fascinating topology: - Dense core of frequent traders - Peripheral clusters of periodic users - Bridge nodes connecting major communities</p>
+<p>Token transfer topology shows a core-periphery structure: a dense nucleus of high-frequency traders surrounded by clusters of less active users.</p>
+<p>Key observations: - Most tokens have far more receivers than senders, confirming diffusion dynamics. - A few outlier tokens approach parity, representing balanced ecosystems or stablecoins. - Reveals the connectivity hierarchy typical of large decentralized networks.</p>
 </section>
 <section id="network-stability-risk" class="level3">
 <h3 class="anchored" data-anchor-id="network-stability-risk">Network Stability &amp; Risk</h3>
@@ -224,14 +230,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Transaction Success Rate</figcaption>
 </figure>
 </div>
-<p>Reliability metrics demonstrate: - 98%+ successful transaction rate - Failed transactions cluster during peak periods - Quick recovery from congestion events</p>
+<p>Transaction reliability remains extremely high, with success rates &gt; 98 % throughout the period. Failures cluster during temporary congestion spikes.</p>
+<p>Key observations: - Minor dips coincide with gas-fee surges → temporary mempool saturation. - Rapid normalization afterward confirms network resilience. - Overall low volatility in failure rates signals operational robustness.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pyspark_blockchain/congestion_vs_gasprice.png" class="img-fluid figure-img"></p>
 <figcaption>Network Congestion</figcaption>
 </figure>
 </div>
-<p>Price-congestion relationship: - Clear correlation between network load and gas prices - Predictable fee increases during high-traffic periods - Evidence of healthy market mechanics</p>
+<p>A clear positive correlation (~ +0.4) exists between utilization and gas price, meaning heavier traffic directly drives fee increases.</p>
+<p>Key observations: - High-utilization hours → gas &gt; 2 gwei on average. - Predictable intra-day peaks (around 16 UTC) reveal consistent global demand cycles. - Confirms healthy market pricing—fees adjust dynamically to congestion.</p>
 </section>
 <section id="key-performance-indicators-from-athena-queries" class="level3">
 <h3 class="anchored" data-anchor-id="key-performance-indicators-from-athena-queries">Key Performance Indicators (from Athena queries)</h3>
@@ -261,7 +269,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Transaction Impact</figcaption>
 </figure>
 </div>
-<p>Economic analysis shows: - Failed transactions cost users ~450 ETH in gas fees - Higher impact during volatile price periods - Opportunity for gas optimization tools</p>
+<p>Gas-waste events spiked mid-month (≈ Sept 16) with failure rates nearing 3.5 %, but typically hover around 1–1.5 %.</p>
+<p>Key observations: - Roughly 300–500 ETH/day lost to failed transactions. - Failures rise during volatile network or price periods. - Highlights opportunity for smart transaction-retries / bundling to minimize inefficiency.</p>
 </section>
 <section id="future-facing-metrics" class="level3">
 <h3 class="anchored" data-anchor-id="future-facing-metrics">Future-Facing Metrics</h3>
@@ -271,7 +280,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Network Growth</figcaption>
 </figure>
 </div>
-<p>Growth indicators suggest: - Steady increase in daily data processed - Scaling solutions keeping pace with demand - Healthy headroom for future growth</p>
+<p>Throughput remains strong, averaging ~850 MB/day, with mild week-to-week oscillations tied to block-size variability.</p>
+<p>Key observations: - Consistent upward trend, confirming scaling headroom. - 7-day moving average stable despite transactional volatility. - Network shows balanced growth—no signs of bandwidth stress.</p>
 <p>These insights demonstrate Ethereum’s maturation as a platform, balancing accessibility, reliability, and economic efficiency. The data points to opportunities in: - Gas fee optimization tools - Congestion prediction services - Whale activity monitoring - Network health dashboards</p>
 </section>
 </section>
