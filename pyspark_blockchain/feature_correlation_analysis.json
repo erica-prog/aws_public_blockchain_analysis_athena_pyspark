@@ -1,0 +1,29 @@
+{
+    "strongest_positive_correlations": [
+        {
+            "feature_1": "total_transactions",
+            "feature_2": "tx_per_block",
+            "correlation": 0.9999101029148018
+        },
+        {
+            "feature_1": "avg_gas_used",
+            "feature_2": "avg_block_utilization_pct",
+            "correlation": 0.9995472094557026
+        },
+        {
+            "feature_1": "avg_gas_price_gwei",
+            "feature_2": "total_fees_eth",
+            "correlation": 0.9974619837147707
+        },
+        {
+            "feature_1": "total_transactions",
+            "feature_2": "total_data_mb",
+            "correlation": 0.9435656529975354
+        },
+        {
+            "feature_1": "total_data_mb",
+            "feature_2": "tx_per_block",
+            "correlation": 0.940354951248703
+        }
+    ]
+}

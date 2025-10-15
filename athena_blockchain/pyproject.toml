@@ -1,0 +1,32 @@
+[project]
+name = "athena-blockchain"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "boto3>=1.28.0",      # AWS SDK for Python (for Athena + S3)
+    "pandas>=2.0.0",      # Data analysis
+    "ipykernel>=6.25.0",  # Lets VS Code & Jupyter connect to this environment
+    "jupyter>=1.0.0",     # Jupyter Notebook support
+    "awscli>=1.42.35"     # AWS CLI commands if you want to use aws configure
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",      # Unit testing (optional)
+    "ruff>=0.1.0",        # Code linting
+    "mypy>=1.0.0"         # Type checking
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+include = [
+    "*.ipynb",
+    "*.md",
+    "img/",
+]

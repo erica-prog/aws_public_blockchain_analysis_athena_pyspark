@@ -1,0 +1,31 @@
+{
+    "total_unique_tokens": 20,
+    "total_transfer_volume": 1.3842678106886472e+16,
+    "top_5_active_tokens": [
+        {
+            "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "transfer_count": 2558147,
+            "total_volume": 0.1187738068817687
+        },
+        {
+            "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "transfer_count": 2314608,
+            "total_volume": 0.2406889626597461
+        },
+        {
+            "token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "transfer_count": 1663751,
+            "total_volume": 102876431.79166232
+        },
+        {
+            "token_address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+            "transfer_count": 647372,
+            "total_volume": 24375436356725.355
+        },
+        {
+            "token_address": "0x06450dee7fd2fb8e39061434babcfc05599a6fb8",
+            "transfer_count": 290301,
+            "total_volume": 88685670604233.6
+        }
+    ]
+}
