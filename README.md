@@ -1,6 +1,6 @@
 # AWS Public Blockchain Analysis using Athena, S3 and PySpark/Python
 
-![Architecture diagram](architectural diagram.png)
+![Architecture diagram](architectural%20diagram.png)
 
 This repository contains exploratory analysis of Ethereum using two complementary notebooks:
 
@@ -85,7 +85,7 @@ Activating the kernel in VS Code / Jupyter
 
 ### Network Health & Growth
 
-![Daily Transaction Volume](pyspark_blockchain/Ethereum Daily Transactions - Last 30 Days.png)
+![Daily Transaction Volume](pyspark_blockchain/Ethereum%20Daily%20Transactions%20-%20Last%2030%20Days.png)
 
 The Ethereum network shows robust daily transaction volume over the past 30 days, with an average of 1.2M+ transactions per day. Notable observations:
 - Consistent baseline activity around 800K transactions
@@ -94,7 +94,7 @@ The Ethereum network shows robust daily transaction volume over the past 30 days
 
 ### Gas Market Dynamics
 
-![Gas Price Trends](pyspark_blockchain/Ethereum Gas Fees Decline Slightly After Weekend Peak.png)
+![Gas Price Trends](pyspark_blockchain/Ethereum%20Gas%20Fees%20Decline%20Slightly%20After%20Weekend%20Peak.png)
 
 Gas prices exhibit interesting patterns that affect network accessibility:
 - Moderate weekend premiums during high-activity periods
@@ -103,7 +103,7 @@ Gas prices exhibit interesting patterns that affect network accessibility:
 
 ### Network Efficiency & Scaling
 
-![Block Utilization](pyspark_blockchain/Ethereum Block Utilization - Stable Despite Minor Volatility.png)
+![Block Utilization](pyspark_blockchain/Ethereum%20Block%20Utilization%20-%20Stable%20Despite%20Minor%20Volatility.png)
 
 Block space usage remains optimized:
 - Average utilization steady at 75-85%
@@ -119,9 +119,10 @@ Analysis of large-holder ("whale") behavior reveals:
 - Periodic large transfers affecting gas markets
 - Strategic timing of major moves during lower-fee periods
 
-![Gas Efficiency](pyspark_blockchain/Gas Efficiency - Top 10 Whales by ETH Moved per ETH Spent.png)
+![Gas Efficiency](pyspark_blockchain/Gas%20Efficiency%20-%20Top%2010%20Whales%20by%20ETH%20Moved%20per%20ETH%20Spent.png)
 
 Whale transaction efficiency:
+
 - Most efficient movers achieve 200+ ETH transferred per ETH spent on gas
 - Clear correlation between size and gas optimization
 - Evidence of sophisticated fee management strategies
@@ -137,7 +138,7 @@ The token transfer network shows fascinating topology:
 
 ### Network Stability & Risk
 
-![Transaction Success Rate](pyspark_blockchain/Daily Transaction Success vs Failure - Network Stability Holds Steady.png)
+![Transaction Success Rate](pyspark_blockchain/Daily%20Transaction%20Success%20vs%20Failure%20-%20Network%20Stability%20Holds%20Steady.png)
 
 Reliability metrics demonstrate:
 - 98%+ successful transaction rate
@@ -175,7 +176,7 @@ Price-congestion relationship:
 
 ### Economic Impact & Trends
 
-![Transaction Impact](pyspark_blockchain/Transaction Failures and Economic Impact.png)
+![Transaction Impact](pyspark_blockchain/Transaction%20Failures%20and%20Economic%20Impact.png)
 
 Economic analysis shows:
 - Failed transactions cost users ~450 ETH in gas fees
@@ -184,7 +185,7 @@ Economic analysis shows:
 
 ### Future-Facing Metrics
 
-![Network Growth](pyspark_blockchain/Network Throughput Remains Robust - Daily Data Processed (MB).png)
+![Network Growth](pyspark_blockchain/Network%20Throughput%20Remains%20Robust%20-%20Daily%20Data%20Processed%20(MB).png)
 
 Growth indicators suggest:
 - Steady increase in daily data processed
