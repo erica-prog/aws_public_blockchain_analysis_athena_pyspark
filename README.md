@@ -112,7 +112,7 @@ Block space usage remains optimized:
 
 ### Whale Activity & Market Impact
 
-![Whale Concentration](pyspark_blockchain/Whale Concentration.png)
+![Whale Concentration](pyspark_blockchain/Whale%20Concentration.png)
 
 Analysis of large-holder ("whale") behavior reveals:
 - Top 10 addresses control significant transaction volume
